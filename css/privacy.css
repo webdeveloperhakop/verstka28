@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 100%;
+    color: inherit;
+    box-sizing: border-box;
+    border: none;
+}
+
+main{
+    font-family: 'Unbounded', cursive;
+}
+
+.privacy{
+    padding-top: 81px;
+    padding-bottom: 81px;
+}
+
+.privacy .container{
+    width: 1186px;
+    margin: 0 auto;
+}
+
+.privacy.container section{
+
+}
+
+.privacy .container section p{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 222.222% */
+}

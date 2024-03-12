@@ -1,0 +1,773 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 100%;
+    color: inherit;
+    box-sizing: border-box;
+    border: none;
+}
+
+.mask{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mask .loader{
+    width: 75px;
+    height: 75px;
+    border: 10px solid #213C53;
+    border-radius: 50%;
+    border-left-color: #B4A696;
+    animation: loader 1.3s linear infinite;
+}
+
+
+.hide{
+    opacity: 0;
+}
+
+@keyframes loader{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.modal_window{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s,   visibility .4s;
+}
+
+.modal_window.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_window_section{
+    width: 500px;
+    padding: 30px;
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    transform: scale(0);
+    transition: transform .8s;
+}
+
+.modal_window.open  .modal_window_section{
+    transform: scale(1);
+}
+
+.icon_wrapper{
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 30px;
+}
+
+.modal_window section svg{
+    width: 20px;
+    height: 20px;
+    fill: #213C53;
+
+    cursor: pointer;
+}
+
+
+.modal_window_form{
+    width: 257px;
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal_window_form .modal_window_inp{
+    width: 257px;
+    height: 52px;
+    padding-left: 10px;
+        
+    color: rgba(56, 49, 40, 0.50);
+    font-family: Unbounded;
+    font-size: 13.818px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.415px;
+    margin-bottom: 20px;
+
+    border: 1px solid #999;
+    outline: none;
+}
+
+.send_form_btn{
+    width: 200px;
+    padding: 15px;
+    border-radius: 39.481px;
+    background: #213C53;
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+main{
+    font-family: 'Unbounded', cursive;
+}
+
+.main_block{
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.main_block .container{
+    width: 1245px;
+    margin: 0 auto;
+}
+
+.main_block .container header{
+    margin-bottom: 50px;
+}
+
+.main_block .container header menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_block .container header menu li{
+    color: #383128;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41.455px; /* 296.11% */
+    text-transform: uppercase;
+}
+
+.main_block .container header menu li a{
+    
+}
+
+.main_block .container header menu li a:hover{
+    color: #213C53;
+}
+
+.main_block .container header menu nav{
+    display: flex;
+    align-items: center;
+}
+
+.main_block .container header menu div{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_block .container header menu div a:nth-child(1){
+    width: 73px;
+    border-radius: 24.676px;
+    background: #213C53;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41.455px; /* 296.11% */
+    text-transform: uppercase;
+}
+
+.main_block .container header menu div a:nth-child(2){
+    color: rgba(33, 60, 83, 0.50);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41.455px; /* 296.11% */
+    text-transform: uppercase;
+}
+
+/* .main_block .container header menu div li{
+    cursor: pointer;
+
+} */
+
+
+.main_block .container section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main_block .container section article{
+   
+}
+
+
+
+.main_block .container section article h1{
+    width: 587px;
+    color: #383128;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 73.041px; /* 101.445% */
+    text-transform: uppercase;
+
+    margin-bottom: 32px;
+}
+
+.main_block .container section article p{   
+    width: 370px;
+    color: #383128;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140.023%;
+    margin-bottom: 60px;
+
+    
+}
+
+.main_block .container section article button{
+    width: 400px;
+    height: 80px;
+    border-radius: 39.481px;
+    background: #213C53;
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.main_block .container section article button:hover{
+    background-color:  #B3C7D0;
+    color: #213C53;
+
+}
+
+
+.about_expert{
+    padding-bottom: 60px;
+}
+
+.about_expert .container{
+    width: 1245px;
+    margin: 0 auto;
+}
+
+.about_expert .container h2{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 41px;
+}
+
+.about_expert .container section{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+}
+
+/* .about_expert .container section img{
+
+}
+
+.about_expert .container section img:hover{
+    transform: scale(1.05);
+} */
+
+.about_expert .container section aside{
+    
+}
+
+.about_expert .container section aside h3{
+    width: 519px;
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 23.689px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; /* 147.749% */
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.about_expert .container section aside p{
+    width: 581px;
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 145%; 
+}
+
+.about_expert .container nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_expert .container nav div{
+    width: 222px;
+}
+
+.about_expert .container nav div .line{
+    width: 214px;
+    height: 1px;
+    border: 1px solid #383128;
+
+    margin-bottom: 21px;
+}
+
+
+.about_expert .container nav div h4{
+    color: #213C53;
+    font-family: Unbounded;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-bottom: 15px;
+}
+
+.about_expert .container nav div p{
+    width: 220px;
+}
+
+.services{
+    padding-bottom: 100px;
+ 
+}
+
+.services .container{
+    width: 1245px;
+    margin: 0 auto;
+}
+
+.services .container h2{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    
+    margin-bottom: 45px;
+}
+
+
+.services .container section{
+    
+}
+
+.services .container section article{
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.services .container section article{
+    border-top: 1px solid rgba(56, 49, 40, 0.50);
+    padding-top: 41px;
+}
+
+.services .container section article:nth-child(8){
+    border-bottom: 1px solid rgba(56, 49, 40, 0.50);
+}
+
+.services .container section article div{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.services .container section article div p{
+    color: #B4A696;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.services .container section article div nav{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .container section article div nav p{
+    color: #B4A696;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.services .container section article div nav img{
+    transition: 0.5s;
+}
+
+.services .container section article aside{
+    width: 880px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+
+}
+
+.services .container section article aside h3{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.services .container section article aside p{
+    width: 880px;
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+}
+
+
+
+.services .container section article aside div p{
+    width: 880px;
+    color: #3E3C3B;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.services .container section article .more{
+    width: 880px;
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+
+    transition: 0.5s;
+    
+}
+
+.services .container section article .more p{
+    width: 880px;
+    color: #3E3C3B;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.info-arrow-active{
+    transform: rotate(90deg);
+    
+}
+
+.img_block{
+    padding-bottom: 120px;
+}
+
+.img_block .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.faq{
+    padding-bottom: 100px;
+}
+
+.faq .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.faq .container h2{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 55px;
+}
+
+.faq .container section{
+
+}
+
+.faq .container section aside{
+    padding: 18px;
+    border: 1.974px solid rgba(56, 49, 40, 0.50);
+    margin-bottom: 30px;
+
+    cursor: pointer;
+}
+
+.faq .container section aside div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-opened{
+    transform: rotate(390deg);
+}
+
+.faq .container section aside div h3{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.572px; /* 203.576% */
+    text-transform: uppercase;
+    padding-left: 30px;
+
+    margin-bottom: 36px;
+}
+
+.faq .container section aside  nav{
+    height: 0;
+    overflow: hidden;
+}
+
+.faq .container section aside nav p{
+    color: #3E3C3B;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; /* 194.444% */
+    padding-left: 30px;
+}
+
+.questions_form{
+    padding-bottom: 50px;
+}
+
+.questions_form .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.questions_form .container h2{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+
+    margin-bottom: 50px;
+}
+
+.questions_form .container  section{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.questions_form .container  section form{
+    width: 594px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questions_form .container  section form h3{
+    color: #B4A696;
+    font-family: Unbounded;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 48px;
+}
+
+.questions_form .container  section form  input{
+    width: 257px;
+    height: 52px;
+    padding-left: 10px;
+        
+    color: rgba(56, 49, 40, 0.50);
+    font-family: Unbounded;
+    font-size: 13.818px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.415px;
+    margin-bottom: 20px;
+
+}
+
+.questions_form .container  section form .name{
+
+   
+}
+
+.questions_form .container  section form .tel{
+  
+}
+
+.questions_form .container  section form  .send_form{
+    width: 400px;
+    height: 80px;
+    border-radius: 39.481px;
+    background: #213C53;
+
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    margin-bottom: 23px;
+}
+
+.questions_form .container  section form p{
+    width: 576px;
+    color: rgba(33, 60, 83, 0.50);
+    font-family: Unbounded;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.26px; /* 152.168% */
+}
+
+
+footer{
+    padding-bottom: 35px;
+}
+
+footer .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer .container section{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+footer .container section menu{
+ 
+}
+
+footer .container section menu h3{
+    color: #383128;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+footer .container section menu li{
+
+    margin-bottom: 30px;
+}
+
+footer .container section menu li a{
+    color: #999;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.2%; /* 22.568px */
+}
+
+footer .container section menu nav{
+    width: 212px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+footer .container article{
+
+}
+
+footer .container article menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container article menu li{
+    color: #999;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 22.186px */
+}
